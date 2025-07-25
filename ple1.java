@@ -123,9 +123,9 @@ public class SampleClass {
             SimpleDateFormat sdf = new SimpleDateFormat(format);
             Calendar calendar = Calendar.getInstance();
             int number = Integer.parseInt(numberString);
-            calendar.add(5, number);
+            cMylendar.add(5, number);
             String date = sdf.format(calendar.getTime());
-            store.updateValue(date);
+            store.updateValue(date); // 11/7/2025
             this.driver.findElement(FindBy.xpath(xpath)).click();
             Thread.sleep(2000L);
             this.driver.findElement(FindBy.xpath("//span[contains(@id,'mat-calendar-button')]")).click();
